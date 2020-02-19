@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+</head>
+<body>
+
+<div class="container" >
+    <center> <h2>Show Info Certificate</h2></center>
+            
+  <table class="table  table-hover" id="getAll" border="3" >
+    <thead>
+      <tr style="background-color:#003366;color:white">
+        <th>User Name</th>
+        <th>Course</th>
+        <th>Course Start</th>
+        <th>Course End</th>
+        <th>Teacher Name</th>
+      </tr>
+    </thead>
+      <tbody>
+   <%print.forEach(function(user){%>
+        <tr>
+            <td><%= user.stu%></td>
+            <td><%= user.course_name%></td>
+            <td><%= user.course_start%></td>
+            <td><%= user.course_end%></td>
+            <td><%= user.teacher_name%></td>
+        </tr>
+  <%  });%>
+          </tbody>
+  </table>
+</div>
+   
+</body>
+</html>
